@@ -10,14 +10,14 @@ var outputNewline = function (str) {
     console.log(str);
 };
 module.exports = function (options) {
-    options = extend({
+    options = assign({
         sameLine: true,
         progressLength: 50,
         arrowHead: '>',
         arrowBody: '=',
         unfinished: '-',
         label: '[webpack] : ',
-        throttle: 0;
+        throttle: 0
     }, options);
     var output = outputSameline;
     if (!options.sameLine) {
