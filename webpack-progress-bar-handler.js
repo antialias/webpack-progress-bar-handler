@@ -11,7 +11,7 @@ var outputNewline = function (str) {
 };
 module.exports = function (options) {
     options = assign({
-        sameLine: true,
+        sameLine: !process.stdout.isTTY,
         progressLength: 50,
         arrowHead: '>',
         arrowBody: '=',
